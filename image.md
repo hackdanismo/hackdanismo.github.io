@@ -1,4 +1,4 @@
-# Images
+# Image
 
 + [Aspect Ratio](#aspect-ratio)
 
