@@ -7,7 +7,7 @@ The `aspect ratio` of an image refers to the proportional relationship between i
 
 **TL;DR** - Essentially, the aspect ratio describes the image's shape.
 
-Commin Aspect Ratios:
+Common Aspect Ratios:
 
 + `1:1`: a square, something like a social media profile picture. This would be if the `width` and `height` dimensions are the same e.g. `500px x 500px`.
 + `16:9`: windscreen, most modern screens and videos.
