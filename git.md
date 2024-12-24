@@ -3,8 +3,10 @@
 + [Git](#git)
   + [Version](#version)
   + [Branches](#branches)
+  + [Commit Changes](#commit-changes)
   + [Undoing Changes](#undoing-changes)
-+ [Hosting Webpages on GitHub Pages](#hosting-webpages-on-gitHub-pages)
+  + [Merging](#merging)
++ [Hosting Webpages on GitHub Pages](#hosting-webpages-on-github-pages)
 
 ## Git
 
@@ -48,6 +50,30 @@ $ git checkout -b <branch-name>
 $ git branch -d <branch-name>
 ```
 
+### Commit Changes
+Once a code change has been made on a branch, we can look to commit this change.
+
+```shell
+# Sometimes useful to check the status
+$ git status
+
+# Add all the files. This is called staging
+$ git add .
+# OR, stage a single file
+$ git add <file-name>
+
+# Create a commit message explaining what has changed
+$ git commit -m "This is a commit message example"
+
+# Push the change
+$ git push
+# OR, you can also push changes to the default remote repository
+$ git push origin
+
+# If this is the first time pushing to a branch, you may need to set the origin
+$ git push --set-upstream origin <branch-name>
+```
+
 ### Undoing Changes
 Changes can be reversed or undone, if needed.
 
@@ -60,6 +86,20 @@ $ git revert <commit-hash>
 
 # Reset to a previous commit
 $ git reset --hard <commit-hash>
+```
+
+### Merging
+Merging changes in `Git` is a process of combining changes from one branch into another.
+
+```shell
+# First, checkout the branch you want to merge code from a branch into e.g. main
+$ git checkout <branch-name>
+
+# Once the branch has been changed, use merge the branch containing the code changes you want to merge
+$ git merge <source-branch>
+
+# You may need to push the changes once done
+$ git push
 ```
 
 ## Hosting Webpages on GitHub Pages
