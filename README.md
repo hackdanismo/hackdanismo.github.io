@@ -2,4 +2,5 @@
 
 ## Markdown Guides
 
++ [Image](image.md)
 + [Git & GitHub](git.md)
