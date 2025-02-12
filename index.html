@@ -6,11 +6,32 @@
     <!-- Responsive Design: The website will adapt to different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- SEO: help search engines to understand the page content -->
-    <meta name="description" content="The personal website of Dan Jackson (Hackdanismo).">
+    <meta name="description" content="Dan Jackson is a Senior Frontend Web Developer based in East Sussex, UK.">
     <!-- SEO: search engines to index and follow links on the page -->
     <meta name="robots" content="index, follow">
 
     <title>Personal Website: Dan Jackson</title>
+
+    <!-- SEO: JSON-LD schema markup -->
+    <script type="application/ld+json">
+        {
+            "@content": "https://schema.org",
+            "@type": "Person",
+            "name": "Dan Jackson",
+            "url": "https://hackdanismo.github.io/"
+            "image": "",
+            "sameAs": [
+                "https://github.com/hackdanismo"
+            ],
+            "jobTitle": "Senior Frontend Web Developer",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Frontify"
+            },
+            "description": "Dan Jackson is a Senior Frontend Web Developer based in East Sussex, UK.",
+            "email": "mailto:dan.jackson.contact@gmail.com"
+        }
+    </script>
 
     <!-- Include the CSS stylesheet -->
     <link rel="stylesheet" href="styles/style.css">
