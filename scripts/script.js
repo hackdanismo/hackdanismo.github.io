@@ -1,4 +1,4 @@
-const toggleSwitch = document.getElementById("theme-toggle");
+const toggleSwitch = document.querySelector(".js-theme-toggle");
 
 // Check if the user has already selected a theme before
 if (localStorage.getItem("theme") === "dark") {
