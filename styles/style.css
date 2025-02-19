@@ -25,6 +25,8 @@ html {
     font-size: 16px;
     /* Set the root font-size */
     font-size: 1rem;
+    /* Enable smooth scrolling for the whole page */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -35,6 +37,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 400;
 }
 
 html, body {
@@ -61,6 +64,37 @@ main {
     margin: 0 auto;
     /* Add horizontal padding to provide spacing on smaller screen sizes */
     padding: 0 1rem;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+/* Underline effect */
+.link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Hover effect: reduce width from right to left */
+.link:hover::after {
+    width: 0%;
+    right: 0;
+}
+
+/* Return effect: expand from left to right */
+.link:not(:hover)::after {
+    width: 100%;
+    transition: width 0.3s ease-in-out;
 }
 
 .navigation {
