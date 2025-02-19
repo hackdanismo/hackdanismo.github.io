@@ -15,5 +15,6 @@ toggleSwitch.addEventListener("change", () => {
         localStorage.setItem("theme", "dark");
     } else {
         localStorage.setItem("theme", "light");
+        document.body.removeAttribute("class");
     }
 })
