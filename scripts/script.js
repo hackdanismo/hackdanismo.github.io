@@ -1,3 +1,21 @@
+// Ensure the page content does not get hidden below the Navigation/Header
+document.addEventListener("DOMContentLoaded", function() {
+    const header = document.querySelector("header")
+    const main = document.querySelector("main")
+
+    function adjustMainPadding() {
+        const headerHeight = header.offsetHeight
+        main.style.paddingTop = `${headerHeight}px`;
+    }
+
+    // Run on page load
+    adjustMainPadding()
+
+    // Run on window resize to adjust dynamically
+    window.addEventListener("resize", adjustMainPadding)
+})
+
+// Navigation/Header scroll
 document.addEventListener("DOMContentLoaded", function() {
     let lastScrollTop = 0
     const header = document.querySelector("header")
@@ -18,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }, false)
 })
 
+// Toggle Switch
 const toggleSwitch = document.querySelector(".js-theme-toggle");
 
 // Check if the user has already selected a theme before
