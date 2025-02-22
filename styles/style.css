@@ -55,6 +55,26 @@ main {
     flex: 1;
 }
 
+nav {
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%;
+}
+
+nav ul {
+    display: flex; 
+    gap: 1rem; 
+    align-items: center; 
+    list-style-type: none; 
+    padding: 0;
+}
+
+.navigation-bar {
+    display: flex; 
+    align-items: center; 
+    gap: 2rem;
+}
+
 .container {
     /* Set the container to take the full width of the page of parent element */
     width: 100%;
@@ -97,6 +117,7 @@ main {
     transition: width 0.3s ease-in-out;
 }
 
+/*
 .navigation {
     display: flex;
     align-items: center;
@@ -110,6 +131,7 @@ main {
     padding: 0;
     list-style-type: none;
 }
+*/
 
 /* Toggle switch */
 .switch {

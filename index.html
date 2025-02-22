@@ -55,7 +55,7 @@
 <body>
 <header role="banner">
     <div class="container">
-        <div class="navigation">
+        <!--<div class="navigation">
             <a href="#">LOGO</a>
             <nav role="navigation" aria-labelledby="main-menu">
                 <ul class="navigation-links">
@@ -70,6 +70,30 @@
                         </label>
                     </li>
                 </ul>
+            </nav>
+        </div>-->
+
+        <div class="navigation-bar">
+            <div>LOGO</div>
+            <nav role="navigation" aria-labelledby="main-menu">
+               <div>
+                    <ul>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                    </ul>
+               </div>
+               <div>
+                    <ul>
+                        <li><a role="button" href="#">Contact</a></li>
+                        <li>
+                            <label for="theme-toggle" class="switch">
+                                <input type="checkbox" class="js-theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                    </ul>
+               </div>
             </nav>
         </div>
     </div>
