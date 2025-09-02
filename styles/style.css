@@ -206,6 +206,15 @@ input:checked + .slider:before {
     border-radius: 2px;
 }
 
+.panel__content {
+    display: flex;
+    gap: 8rem;
+}
+
+.panel__content-copy {
+    margin-top: 2rem;
+}
+
     /* --- Polaroid frame --- */
     .polaroid {
         position: relative;
@@ -219,7 +228,7 @@ input:checked + .slider:before {
         margin: 0;
         padding-bottom: 40px;      /* extra space for caption strip */
         border: 1px solid #e6e6e6;
-        border-radius: 8px;
+        /*border-radius: 8px;*/
         box-shadow: 0 12px 30px rgba(0,0,0,.25), 0 6px 12px rgba(0,0,0,.1);
         transform: rotate(-2deg);
         transition: transform .18s ease, box-shadow .18s ease;
