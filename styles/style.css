@@ -178,3 +178,26 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(24px);
 }
+
+footer {
+    padding: 1rem;
+    padding: 16px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content__social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-bottom: 16px;
+}
+
+.footer-content__contact {
+    display: flex;
+    flex-direction: column;
+}
