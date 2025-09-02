@@ -3,6 +3,7 @@
     --black: #000;
     --dark-grey: #333;
     --light-grey: #ccc;
+    --lighter-grey: #eee;
     --white: #fff;
 
     --bg-color: var(--white);
@@ -178,6 +179,97 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(24px);
 }
+
+.panel {
+    background-color: var(--lighter-grey);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.panel h2 {
+    text-align: center;
+}
+
+/* Small underline underneath the heading */
+.panel h2::after {
+    content: "";
+    display: block;
+    /* Length of the underline */
+    width: 3rem; 
+    /* Thickness of the underline */        
+    height: 1px; 
+    /* Colour */        
+    background: #333; 
+    /* Centers the underline underneath the heading text */
+    margin: 12px auto 0;
+    /* Rounded edges */
+    border-radius: 2px;
+}
+
+    /* --- Polaroid frame --- */
+    .polaroid {
+        position: relative;
+        top: 40px;
+        z-index: 10;
+        display: inline-block;
+        width: 240px;              /* fixed width */
+        height: 300px;             /* fixed height */
+        background: #fff;          /* “paper” */
+        padding: 12px;
+        margin: 0;
+        padding-bottom: 40px;      /* extra space for caption strip */
+        border: 1px solid #e6e6e6;
+        border-radius: 8px;
+        box-shadow: 0 12px 30px rgba(0,0,0,.25), 0 6px 12px rgba(0,0,0,.1);
+        transform: rotate(-2deg);
+        transition: transform .18s ease, box-shadow .18s ease;
+      }
+
+      .polaroid--twist {
+        transform: rotate(8deg);
+      }
+  
+      .polaroid:hover {
+        transform: rotate(0deg) translateY(-2px);
+        box-shadow: 0 16px 36px rgba(0,0,0,.3), 0 8px 16px rgba(0,0,0,.14);
+      }
+
+      .polaroid--twist:hover {
+        transform: rotate(4deg) translateY(-2px);
+      }
+  
+      .polaroid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;         /* crop image neatly */
+        /*border-radius: 6px;*/
+        user-select: none;
+        -webkit-user-drag: none;
+      }
+  
+      .polaroid .caption {
+        position: absolute;
+        left: 12px; right: 12px; bottom: 10px;
+        text-align: center;
+        font: 500 0.9rem/1.2 system-ui, sans-serif;
+        color: #222;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+  
+      /* optional stacked paper look */
+      .polaroid.stack::before {
+        content: "";
+        position: absolute;
+        inset: 8px;
+        border-radius: 6px;
+        background: #fff;
+        border: 1px solid #e6e6e6;
+        box-shadow: 0 8px 20px rgba(0,0,0,.18);
+        transform: rotate(4deg);
+        z-index: -1;
+      }
 
 footer {
     padding: 1rem;
